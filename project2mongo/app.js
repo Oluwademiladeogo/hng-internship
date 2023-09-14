@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require("mongoose");
 // app.use(helmet())
 app.use(express.json());
-
+app.use(express.static("public"))
 app.use("/api", require("./handlers/handler.js"));
 
 const MONGODB_URI = process.env.MONGODB_URI;
